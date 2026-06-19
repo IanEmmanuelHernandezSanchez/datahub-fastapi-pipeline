@@ -1,0 +1,11 @@
+# Carpetas de Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secretos y configuración local
+.env
+
+# Archivos de Docker y Base de datos locales
+.database_data/
