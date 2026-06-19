@@ -10,9 +10,9 @@ services:
       MYSQL_ROOT_PASSWORD: root_password123
       MYSQL_DATABASE: datahub_relational
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
-      - .database_data/mysql:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
 
   # --- CONTENEDOR DE MONGO DB ---
   mongo_db:
@@ -25,4 +25,8 @@ services:
     ports:
       - "27017:27017" #Mapeo de los puertos del contenedor 
     volumes:
-      - .database_data/mongo:/data/db #Con esto se guarda el contenedor creando una carpeta oculta
+      - mongo_data:/data/db #Con esto se guarda el contenedor creando una carpeta oculta
+      
+volumes:
+    mysql_data:
+    mongo_data:
