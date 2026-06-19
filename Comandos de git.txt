@@ -1,0 +1,11 @@
+git status : Muestra los archivos que cambiaste, cuáles borraste y cuáles son nuevos y git aún no conoce.
+
+git add . : Prepara los archivos modificados y los mete a la "lista de espera" para ser guardados en el proximo commit.
+git add nombre_del_archivo.py (Si solo quieres agregar un archivo especfico)
+
+git commit -m "mensaje con el commit" : El mensaje debe describir que cambiaste
+
+git push : Empuja los commits de manera local hacia el repositorio en la nube de Github.
+
+git log : Te muestra el historial de todos los commits que has tomado, quién las hizo y a que hora.
+
