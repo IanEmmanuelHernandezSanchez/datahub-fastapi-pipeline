@@ -1,0 +1,20 @@
+1. Crear un archivo docker-compose.yml
+
+2. Hacer su codigo
+version:
+services:
+	# --Contenedor 
+	mysql_db:
+		image:
+		container_name:
+		restart:
+		environment:
+			MYSQL_ROOT_PASSWORD:
+			MYSQL_DATABASE:
+		ports:
+			-""
+		volumes:
+			-""
+
+3. Encender los contenedores y que corran en 2do plano 
+docker compose up -d

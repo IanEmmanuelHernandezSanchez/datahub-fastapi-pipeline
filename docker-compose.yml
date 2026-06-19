@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # --- CONTENEDOR DE MYSQL ---
+  mysql_db:
+    image: mysql:8.0
+    container_name: datahub_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password123
+      MYSQL_DATABASE: datahub_relational
+    ports:
+      - "3306:3306"
+    volumes:
+      - .database_data/mysql:/var/lib/mysql
+
+  # --- CONTENEDOR DE MONGO DB ---
+  mongo_db:
+    image: mongo:6.0
+    container_name: datahub_mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: mongo_password123
+    ports:
+      - "27017:27017" #Mapeo de los puertos del contenedor 
+    volumes:
+      - .database_data/mongo:/data/db #Con esto se guarda el contenedor creando una carpeta oculta
